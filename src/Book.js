@@ -12,7 +12,6 @@ class Book extends React.Component {
   /* Method to update shelf on change in select element */
   changeShelf = (shelf) => {
     this.setState((state) => ({ shelf }));
-    console.log(this.state);
   }
 
   render() {
