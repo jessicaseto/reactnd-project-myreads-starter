@@ -15,6 +15,10 @@ class MyReads extends React.Component {
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
+                  {this.props.books.filter((book) => (book.shelf === 'currentlyReading'))
+                    .map((book) => {
+                      console.log(book);
+                    })}
                   <Book/>
                   <Book/>
                 </ol>
