@@ -1,7 +1,6 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Book from './Book'
-import SearchBooks from './SearchBooks'
 
 class MyReads extends React.Component {
   render() {
