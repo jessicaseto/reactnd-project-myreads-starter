@@ -48,10 +48,6 @@ class MyReads extends React.Component {
             className="open-search-link"
           >Add a book</Link>
         </div>
-        <Route path="/search" render={() => (
-            <SearchBooks/>
-          )}
-        />
       </div>
     );
   }
