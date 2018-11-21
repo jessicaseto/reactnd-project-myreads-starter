@@ -1,14 +1,15 @@
 import React from 'react'
 
 class ShelfControl extends React.Component {
-  state = {
-    
+  handleSelect = (event) => {
+    event.persist();
+    this.props.onShelfChange(event.target.value);
   }
 
   render() {
     return (
       <div className="book-shelf-changer">
-        <select>
+        <select onChange={this.handleSelect}>
           <option value="move" disabled>Move to...</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
