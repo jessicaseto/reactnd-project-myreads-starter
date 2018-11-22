@@ -22,6 +22,7 @@ class Book extends React.Component {
         <div className=" book-top">
           <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: bgImg}}></div>
           <ShelfControl
+            book={book}
             onShelfChange={this.changeShelf}
           />
         </div>

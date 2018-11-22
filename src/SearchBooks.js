@@ -6,7 +6,7 @@ import * as BooksAPI from './BooksAPI'
 class SearchBooks extends React.Component {
   state = {
     query: '',
-    showingBooks: []
+    searchedBooks: []
   };
 
   updateQuery = (query) => {
@@ -14,13 +14,13 @@ class SearchBooks extends React.Component {
   }
 
   clearQuery = () => {
-    this.setState({ query : '', showingBooks: [] });
+    this.setState({ query : '', searchedBooks: [] });
   }
 
   search = (query) => {
     if (query) {
       BooksAPI.search(query).then((books) => {
-        this.setState({ showingBooks: books });
+        this.setState({ searchedBooks: books });
       }).catch((e) => (console.log(e)));
     }
   }
@@ -49,8 +49,8 @@ class SearchBooks extends React.Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {(this.state.showingBooks.length > 0) ? (
-                this.state.showingBooks.map((book) => (
+            {(this.state.searchedBooks.length > 0) ? (
+                this.state.searchedBooks.map((book) => (
                   <li key={book.id}>
                     <Book book={book}/>
                   </li>

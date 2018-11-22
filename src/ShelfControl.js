@@ -9,7 +9,7 @@ class ShelfControl extends React.Component {
   render() {
     return (
       <div className="book-shelf-changer">
-        <select onChange={this.handleSelect} value="move">
+        <select onChange={this.handleSelect} value={this.props.book.shelf}>
           <option value="move" disabled>Move to...</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
