@@ -16,11 +16,12 @@ class Book extends React.Component {
 
   render() {
     const book = this.props.book;
+    const bgImg = book.hasOwnProperty('imageLinks') ? `url(${book.imageLinks.smallThumbnail})` : 'url("http://via.placeholder.com/128x193?text=?")';
 
     return (
       <div className="book">
         <div className="book-top">
-          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})`}}></div>
+          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: bgImg}}></div>
           <ShelfControl
             onShelfChange={this.changeShelf}
           />
