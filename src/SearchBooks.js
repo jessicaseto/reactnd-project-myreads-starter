@@ -65,6 +65,11 @@ class SearchBooks extends React.Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
+            {/* Filters searchedBooks against shelvedBooks if at least one
+                book is in the shelvedBooks array. Searched books that have
+                an id matching a shelved book get updated to have a matching
+                shelf to the shelved book.
+            */}
             {(this.state.searchedBooks.length > 0) ? (
               this.state.searchedBooks
                 .filter((searchedBook) => this.props.books.map((shelvedBook) => {
