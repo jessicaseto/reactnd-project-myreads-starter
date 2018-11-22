@@ -1,10 +1,16 @@
 import React from 'react'
 import ShelfControl from './ShelfControl'
+import { update } from './BooksAPI'
 
 class Book extends React.Component {
   /* Method to update shelf on change in select element */
   changeShelf = (shelf) => {
-    this.setState((state) => ({ shelf }));
+    const book = this.props.book;
+    update(book, shelf).then(
+      (response) => console.log(response)
+    ).catch(
+      (e) => console.log(e)
+    );
   }
 
   render() {
