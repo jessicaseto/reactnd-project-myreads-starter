@@ -17,6 +17,12 @@ class SearchBooks extends React.Component {
     this.setState({ query : '', searchedBooks: [] });
   }
 
+  /* Function: search
+   * Parameters: query
+   * Description: Calls BooksAPI.search(query) method and adds results to
+   *              this.state.searchedBooks as an array. If no results are
+   *              returned from the query, the query is cleared.
+   */
   search = (query) => {
     if (query) {
       BooksAPI.search(query).then((books) => {
