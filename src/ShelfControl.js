@@ -1,6 +1,12 @@
 import React from 'react'
 
 class ShelfControl extends React.Component {
+  /* Function: handleSelect
+   * Parameters: event(event object)
+   * Description: Handler for change in select element. Calls
+   *              updateBookshelf(book, shelf) method passed by props to
+   *              update the bookshelf of a book when changed.
+   */
   handleSelect = (event) => {
     event.persist();
     this.props.updateBookshelf(this.props.book, event.target.value);
