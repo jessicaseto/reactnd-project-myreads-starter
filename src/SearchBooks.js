@@ -50,19 +50,18 @@ class SearchBooks extends React.Component {
         <div className="search-books-results">
           <ol className="books-grid">
             {(this.state.searchedBooks.length > 0) ? (
-                this.state.searchedBooks.map((book) => (
-                  <li key={book.id}>
-                    <Book book={book}/>
-                  </li>
-                ))
-              ) : (
-                (this.state.query) && (
-                  <div>
-                    <p>Unfortunately, the query you made did not return any books! :(</p>
-                  </div>
-                )
+              this.state.searchedBooks.map((book) => (
+                <li key={book.id}>
+                  <Book book={book}/>
+                </li>
+              ))
+            ) : (
+              (this.state.query) && (
+                <div>
+                  <p>Unfortunately, the query you made did not return any books! :(</p>
+                </div>
               )
-            }
+            )}
           </ol>
         </div>
       </div>
