@@ -11,6 +11,11 @@ class BooksApp extends React.Component {
     shelvedBooks: []
   };
 
+  /* Function: getShelvedBooks
+   * Parameters: none
+   * Description: Calls BooksAPI.getAll() method and adds results to
+   *              this.state.shelvedBooks as an array.
+   */
   getShelvedBooks = () => {
     BooksAPI.getAll().then(
       (books) => {
