@@ -19,6 +19,11 @@ class BooksApp extends React.Component {
     );
   }
 
+  /* Function: updateBookshelf
+   * Parameters: book(object), shelf(string)
+   * Description: Calls BooksAPI.update(book, shelf) method and refreshes
+   *              results in this.state.shelvedBooks as an array.
+   */
   updateBookshelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
       .then(this.getShelvedBooks)
