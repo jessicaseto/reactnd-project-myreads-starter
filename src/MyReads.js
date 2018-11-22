@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Book from './Book'
+import Bookshelf from './Bookshelf'
 
 class MyReads extends React.Component {
   render() {
+    console.log(this.props.books);
     return (
       <div className="list-books">
         <div className="list-books-title">
@@ -11,37 +12,9 @@ class MyReads extends React.Component {
         </div>
         <div className="list-books-content">
           <div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Currently Reading</h2>
-              <div className="bookshelf-books">
-                <ol className="books-grid">
-                  {this.props.books
-                    .filter((book) => (
-                      book.shelf === 'currentlyReading'
-                    ))
-                    .map((book) => (
-                      <li key={book.id}>
-                        <Book book={book}/>
-                      </li>
-                    ))
-                  }
-                </ol>
-              </div>
-            </div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Want to Read</h2>
-              <div className="bookshelf-books">
-                <ol className="books-grid">
-                </ol>
-              </div>
-            </div>
-            <div className="bookshelf">
-              <h2 className="bookshelf-title">Read</h2>
-              <div className="bookshelf-books">
-                <ol className="books-grid">
-                </ol>
-              </div>
-            </div>
+            <Bookshelf books={this.props.books} shelf='currentlyReading' shelfTitle='Currently Reading'/>
+            <Bookshelf books={this.props.books} shelf='wantToRead' shelfTitle='Want To Read'/>
+            <Bookshelf books={this.props.books} shelf='read' shelfTitle='Read'/>
           </div>
         </div>
         <div className="open-search">
