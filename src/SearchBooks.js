@@ -22,6 +22,8 @@ class SearchBooks extends React.Component {
       BooksAPI.search(query).then((books) => {
         this.setState({ searchedBooks: books });
       }).catch((e) => (console.log(e)));
+    } else {
+      this.clearQuery();
     }
   }
 
@@ -41,7 +43,7 @@ class SearchBooks extends React.Component {
             */}
             <input type="text" placeholder="Search by title or author" onChange={(event) => {
                 this.updateQuery(event.target.value);
-                this.search(this.state.query);
+                this.search(event.target.value);
               }}
             />
             <div>{this.state.query}</div>
