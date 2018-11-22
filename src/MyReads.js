@@ -4,7 +4,6 @@ import Bookshelf from './Bookshelf'
 
 class MyReads extends React.Component {
   render() {
-    console.log(this.props.books);
     return (
       <div className="list-books">
         <div className="list-books-title">
