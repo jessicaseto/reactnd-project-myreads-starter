@@ -7,18 +7,18 @@ import './App.css'
 
 class BooksApp extends React.Component {
   state = {
-    books: []
+    shelvedBooks: []
   };
 
   render() {
     return (
       <div className="app">
         <Route exact path="/" render={() => (
-            <MyReads books={this.state.books}/>
+            <MyReads books={this.state.shelvedBooks}/>
           )}
         />
         <Route path="/search" render={() => (
-            <SearchBooks books={this.state.books}/>
+            <SearchBooks books={this.state.shelvedBooks}/>
           )}
         />
       </div>

@@ -19,8 +19,6 @@ class MyReads extends React.Component {
                     .map((book) => {
                       console.log(book);
                     })}
-                  <Book/>
-                  <Book/>
                 </ol>
               </div>
             </div>
@@ -28,8 +26,6 @@ class MyReads extends React.Component {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  <Book/>
-                  <Book/>
                 </ol>
               </div>
             </div>
@@ -37,9 +33,6 @@ class MyReads extends React.Component {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  <Book/>
-                  <Book/>
-                  <Book/>
                 </ol>
               </div>
             </div>
