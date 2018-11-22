@@ -18,10 +18,11 @@ class SearchBooks extends React.Component {
   }
 
   search = (query) => {
-    BooksAPI.search(query).then((books) => {
-      console.log(books);
-      this.setState({ showingBooks: books });
-    }).catch((e) => console.log(e));
+    if (query) {
+      BooksAPI.search(query).then((books) => {
+        this.setState({ showingBooks: books });
+      }).catch((e) => (console.log(e)));
+    }
   }
 
   render() {
@@ -48,12 +49,18 @@ class SearchBooks extends React.Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {this.state.showingBooks && (
+            {(this.state.showingBooks.length > 0) ? (
                 this.state.showingBooks.map((book) => (
                   <li key={book.id}>
                     <Book book={book}/>
                   </li>
                 ))
+              ) : (
+                (this.state.query) && (
+                  <div>
+                    <p>Unfortunately, the query you made did not return any books! :(</p>
+                  </div>
+                )
               )
             }
           </ol>
