@@ -15,17 +15,19 @@ class Book extends React.Component {
   }
 
   render() {
+    const book = this.props.book;
+
     return (
-      <li key={this.state.title}>
+      <li key={book.id}>
         <div className="book">
           <div className="book-top">
-            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: this.state.backgroundImage}}></div>
+            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})`}}></div>
             <ShelfControl
               onShelfChange={this.changeShelf}
             />
           </div>
-          <div className="book-title">{this.state.title}</div>
-          <div className="book-authors">{this.state.author}</div>
+          <div className="book-title">{book.title}</div>
+          <div className="book-authors">{book.author}</div>
         </div>
       </li>
     );
