@@ -1,18 +1,7 @@
 import React from 'react'
 import ShelfControl from './ShelfControl'
-import { update } from './BooksAPI'
 
 class Book extends React.Component {
-  /* Method to update shelf on change in select element */
-  changeShelf = (shelf) => {
-    const book = this.props.book;
-    update(book, shelf).then(
-      (response) => console.log(response)
-    ).catch(
-      (e) => console.log(e)
-    );
-  }
-
   render() {
     const book = this.props.book;
     const bgImg = book.hasOwnProperty('imageLinks') ? `url(${book.imageLinks.smallThumbnail})` : 'url("http://via.placeholder.com/128x193?text=?")';
@@ -23,7 +12,7 @@ class Book extends React.Component {
           <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: bgImg}}></div>
           <ShelfControl
             book={book}
-            onShelfChange={this.changeShelf}
+            updateBookshelf={this.props.updateBookshelf}
           />
         </div>
         <div className="book-title">{book.title}</div>

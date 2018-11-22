@@ -3,7 +3,7 @@ import React from 'react'
 class ShelfControl extends React.Component {
   handleSelect = (event) => {
     event.persist();
-    this.props.onShelfChange(event.target.value);
+    this.props.updateBookshelf(this.props.book, event.target.value);
   }
 
   render() {

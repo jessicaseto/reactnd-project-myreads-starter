@@ -58,7 +58,7 @@ class SearchBooks extends React.Component {
                   return searchedBook;
                 })).map((book) => (
                   <li key={book.id}>
-                    <Book book={book}/>
+                    <Book book={book} updateBookshelf={this.props.updateBookshelf}/>
                   </li>
                 ))
             ) : (

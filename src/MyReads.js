@@ -11,9 +11,24 @@ class MyReads extends React.Component {
         </div>
         <div className="list-books-content">
           <div>
-            <Bookshelf books={this.props.books} shelf='currentlyReading' shelfTitle='Currently Reading'/>
-            <Bookshelf books={this.props.books} shelf='wantToRead' shelfTitle='Want To Read'/>
-            <Bookshelf books={this.props.books} shelf='read' shelfTitle='Read'/>
+            <Bookshelf
+              books={this.props.books}
+              updateBookshelf={this.props.updateBookshelf}
+              shelf='currentlyReading'
+              shelfTitle='Currently Reading'
+            />
+            <Bookshelf
+              books={this.props.books}
+              updateBookshelf={this.props.updateBookshelf}
+              shelf='wantToRead'
+              shelfTitle='Want To Read'
+            />
+            <Bookshelf
+              books={this.props.books}
+              updateBookshelf={this.props.updateBookshelf}
+              shelf='read'
+              shelfTitle='Read'
+            />
           </div>
         </div>
         <div className="open-search">
