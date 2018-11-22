@@ -18,7 +18,7 @@ class SearchBooks extends React.Component {
   }
 
   /* Function: search
-   * Parameters: query
+   * Parameters: query(string)
    * Description: Calls BooksAPI.search(query) method and adds results to
    *              this.state.searchedBooks as an array. If no results are
    *              returned from the query, the query is cleared.
