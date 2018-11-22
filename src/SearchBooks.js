@@ -14,7 +14,7 @@ class SearchBooks extends React.Component {
   }
 
   clearQuery = () => {
-    this.setState({ query : '' });
+    this.setState({ query : '', showingBooks: [] });
   }
 
   search = (query) => {
