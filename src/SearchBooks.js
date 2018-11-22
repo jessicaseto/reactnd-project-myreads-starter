@@ -9,12 +9,18 @@ class SearchBooks extends React.Component {
     searchedBooks: []
   };
 
-  // Function to update the query in this.state
+  /* Function: updateQuery
+   * Parameters: query(string)
+   * Description: Updates this.state.query to the query passed in.
+   */
   updateQuery = (query) => {
     this.setState({query});
   }
 
-  // Function to clear the query string and searchedBooks array in this.state
+  /* Function: clearQuery
+   * Parameters: none
+   * Description: Resets this.state to the original state.
+   */
   clearQuery = () => {
     this.setState({ query : '', searchedBooks: [] });
   }
