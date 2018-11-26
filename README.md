@@ -1,7 +1,6 @@
 # MyReads Project
 
 The MyReads Project is a book reading app that is part of the Udacity Front End Nanodegree Program. The purpose of the project is to create a dynamic and responsive web application with the use of React.
----
 
 ## Installation
 
