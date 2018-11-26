@@ -15,7 +15,7 @@ Once the app is running on the local server, you should be able to see the main 
 
 ![Main Page](/src/img/myreads.jpg?raw=true "Main Page")
 
-Browse through the three bookshelves, "Currently Reading", "Want to Read", and "Read". You may change which shelf a book belongs in by changing the select option in the select menu on a particular book.
+Browse through the three bookshelves, "Currently Reading", "Want To Read", and "Read". You may change which shelf a book belongs in by changing the select option in the select menu on a particular book.
 
 ![Shelf Select](/src/img/shelfselect.jpg?raw=true "Shelf Select")
 
