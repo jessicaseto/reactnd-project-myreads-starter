@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class ShelfControl extends React.Component {
   /* Function: handleSelect
@@ -28,6 +29,10 @@ class ShelfControl extends React.Component {
       </div>
     );
   }
+}
+
+ShelfControl.propTypes = {
+  book: PropTypes.object.isRequired
 }
 
 export default ShelfControl
