@@ -12,15 +12,15 @@ To access the application:
 ## Usage
 
 Once the app is running on the local server, you should be able to see the main page, as shown in the screenshot below.
-![Main Page](/img/myreads.jpg?raw=true "Main Page")
+![Main Page](/src/img/myreads.jpg?raw=true "Main Page")
 
 Browse through the three bookshelves, "Currently Reading", "Want to Read", and "Read". You may change which shelf a book belongs in by changing the select option in the select menu on a particular book.
 
-![Shelf Select](/img/shelfselect.jpg?raw=true "Shelf Select")
+![Shelf Select](/src/img/shelfselect.jpg?raw=true "Shelf Select")
 
 Finally, to add new books to the bookshelf, you can reach the search page by clicking on the (+) at the bottom right corner of the app. The search page should appear as shown in the screenshot below. Note that the screenshot shows a search of "art". You can change the search query by typing into the input box.
 
-![Search Page](/img/search.jpg?raw=true "Search Page")
+![Search Page](/src/img/search.jpg?raw=true "Search Page")
 
 ## Source File Directory Guide
 ```bash
