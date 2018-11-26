@@ -1,10 +1,9 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-// import * as BooksAPI from './BooksAPI'
-import MyReads from './MyReads'
-import SearchBooks from './SearchBooks'
-import * as BooksAPI from './BooksAPI'
-import './App.css'
+import React from 'react';
+import { Route } from 'react-router-dom';
+import MyReads from './MyReads';
+import SearchBooks from './SearchBooks';
+import * as BooksAPI from './BooksAPI';
+import './App.css';
 
 class BooksApp extends React.Component {
   state = {
@@ -57,4 +56,4 @@ class BooksApp extends React.Component {
   }
 }
 
-export default BooksApp
+export default BooksApp;

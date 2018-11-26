@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Bookshelf from './Bookshelf'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Bookshelf from './Bookshelf';
+import PropTypes from 'prop-types';
 
 class MyReads extends React.Component {
   render() {
@@ -45,6 +45,6 @@ class MyReads extends React.Component {
 
 MyReads.propTypes = {
   books: PropTypes.array.isRequired
-}
+};
 
-export default MyReads
+export default MyReads;

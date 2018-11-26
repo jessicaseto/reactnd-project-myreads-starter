@@ -1,6 +1,6 @@
-import React from 'react'
-import ShelfControl from './ShelfControl'
-import PropTypes from 'prop-types'
+import React from 'react';
+import ShelfControl from './ShelfControl';
+import PropTypes from 'prop-types';
 
 class Book extends React.Component {
   render() {
@@ -33,6 +33,6 @@ class Book extends React.Component {
 
 Book.propTypes = {
   book: PropTypes.object.isRequired
-}
+};
 
-export default Book
+export default Book;
